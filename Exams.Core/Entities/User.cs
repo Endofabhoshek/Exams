@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace Exams.Core.Entities
 {
-    public class User
-    {
-        public int Id { get; set; }
-        public string UserName { get; set; }
+    public class User : IdentityUser
+    {       
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public bool IsAdmin { get; set; }
+        public UserAccess UserAccessRights { get; set; }
+        public bool IsPaid { get; set; }
     }
 }
