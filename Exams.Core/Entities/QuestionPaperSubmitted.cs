@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Exams.ServiceInterfaces;
 
 namespace Exams.Core.Entities
 {
-    public class QuestionPaperSubmitted
+    public class QuestionPaperSubmitted : IModel
     {
         public int Id { get; set; }
         public QuestionPaper QuestionPaper { get; set; }

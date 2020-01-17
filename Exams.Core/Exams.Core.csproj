@@ -67,5 +67,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Exams.ServiceInterfaces\Exams.ServiceInterfaces.csproj">
+      <Project>{2FB7AC8F-3BBD-4A41-8D87-B9D268811E67}</Project>
+      <Name>Exams.ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
