@@ -9,7 +9,7 @@ namespace Exams.ServiceInterfaces.UnitOfWork
 {
     public interface IUnitOfWork : IDisposable
     {
-        void Init(string connectionString = "name=Exams");
+        void Init(string connectionString = "name = EFDbContext");
         IDisposable CreateTransaction();
 
         int SaveChanges();

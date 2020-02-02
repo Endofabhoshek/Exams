@@ -45,6 +45,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -56,7 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\EFDbContext.cs" />
+    <Compile Include="Context\ExamDbContext.cs" />
     <Compile Include="Migrations\201912121052296_FirstMigrationUser.cs" />
     <Compile Include="Migrations\201912121052296_FirstMigrationUser.designer.cs">
       <DependentUpon>201912121052296_FirstMigrationUser.cs</DependentUpon>
@@ -67,11 +73,9 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-    <Folder Include="UnitOfWork\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -80,6 +84,10 @@
     <ProjectReference Include="..\Exams.Core\Exams.Core.csproj">
       <Project>{15da58dd-5c67-41f9-8b25-b37427519f94}</Project>
       <Name>Exams.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Exams.ServiceInterfaces\Exams.ServiceInterfaces.csproj">
+      <Project>{2FB7AC8F-3BBD-4A41-8D87-B9D268811E67}</Project>
+      <Name>Exams.ServiceInterfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
