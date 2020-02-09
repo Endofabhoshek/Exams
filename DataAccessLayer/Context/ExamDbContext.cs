@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Context
 {
-    public class ExamDbContext : IdentityDbContext
+    public class ExamDbContext : IdentityDbContext // kuch aur rahega toh dekhte baad me
     {
         #region DbEntities
         //public DbSet<User> Users { get; set; } // dekhte hai ye baad me
@@ -51,8 +51,17 @@ namespace DataAccessLayer.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder); 
+            base.OnModelCreating(modelBuilder);
 
+            //modelBuilder.Types().Configure(c => c.ToTable())  normally configure karte hai
+
+            ExamCategoriesCreation(modelBuilder);
+        }
+
+        //aaj ke lie ek hi test ke lie. baaki baad me dekhte hai
+        private void ExamCategoriesCreation(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ExamCategories>().ToTable("exam_categories");
 
         }
     }

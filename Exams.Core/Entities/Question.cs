@@ -14,6 +14,6 @@ namespace Exams.Core.Entities
         public bool IsMCQ { get; set; }
         public string TextAnswer { get; set; }
         public MCQOptions MCQAnswer { get; set; } // how database does it?        
-        public int MCQOptionsId { get; set; }        
+        public int MCQOptionsId { get; set; } 
     }
 }

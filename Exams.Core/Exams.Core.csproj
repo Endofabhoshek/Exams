@@ -60,6 +60,7 @@
     <Compile Include="Entities\QuestionPaperSubmitted.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserAccess.cs" />
+    <Compile Include="Helpers\SqlSchemaHelpers.cs" />
     <Compile Include="Infrastructure\Flag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
