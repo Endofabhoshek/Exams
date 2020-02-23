@@ -51,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\UserClaim.cs" />
+    <Compile Include="Entities\UserLogin.cs" />
     <Compile Include="Entities\ExamCategories.cs" />
     <Compile Include="Entities\ExamTest.cs" />
     <Compile Include="Entities\Instructions.cs" />
@@ -60,6 +63,7 @@
     <Compile Include="Entities\QuestionPaperSubmitted.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserAccess.cs" />
+    <Compile Include="Entities\UserRole.cs" />
     <Compile Include="Helpers\SqlSchemaHelpers.cs" />
     <Compile Include="Infrastructure\Flag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

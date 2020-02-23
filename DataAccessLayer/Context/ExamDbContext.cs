@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Context
 {
-    public class ExamDbContext : IdentityDbContext // kuch aur rahega toh dekhte baad me
+    public class ExamDbContext : IdentityDbContext<User, Role, int, UserLogin, UserRole, UserClaim>
     {
         #region DbEntities
         //public DbSet<User> Users { get; set; } // dekhte hai ye baad me

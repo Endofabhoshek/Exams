@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
+﻿using Exams.ServiceInterfaces;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Exams.Core.Entities
 {
-    public class User : IdentityUser
+    public class User : IdentityUser<int, UserLogin, UserRole, UserClaim>, IModel
     {       
         public string FirstName { get; set; }
         public string LastName { get; set; }
